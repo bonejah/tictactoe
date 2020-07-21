@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Tic TacToe</title>
+  </head>
+  <body onload="clock()">
+    <div class="container">
+      <div class="buttons">
+        <input class="button" type="button" value="RESTART" onclick="restartGame()">
+      </div>
+      <div id="clock"></div>
+      <h1>TIC TAC TOE</h1>
+      <div id="squares">
+        <div class="square">
+          <div id="top-left" class="square-item"></div>
+          <div id="top-center" class="square-item"></div>
+          <div id="top-right" class="square-item"></div>
+        </div>
+        <div class="square">
+          <div id="mid-left" class="square-item"></div>
+          <div id="mid-center" class="square-item"></div>
+          <div id="mid-right" class="square-item"></div>
+        </div>
+        <div class="square">
+          <div id="bottom-left" class="square-item"></div>
+          <div id="bottom-center" class="square-item"></div>
+          <div id="bottom-right" class="square-item"></div>
+        </div>
+      </div>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>
