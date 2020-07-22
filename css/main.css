@@ -50,7 +50,6 @@ h1 {
 }
 
 #top-left {
-  /* background-color: blue; */
   width: 10vw;
   height: 10vw;
   border-bottom: 7px solid;
@@ -58,7 +57,6 @@ h1 {
 }
 
 #top-center {
-  /* background-color: yellow; */
   width: 10vw;
   height: 10vw;
   border-left: 7px solid;
@@ -68,7 +66,6 @@ h1 {
 }
 
 #top-right  {
-  /* background-color: green; */
   width: 10vw;
   height: 10vw;
   border-bottom: 7px solid;
@@ -76,7 +73,6 @@ h1 {
 }
 
 #mid-left {
-  /* background-color: blue; */
   width: 10vw;
   height: 10vw;
   border-bottom: 7px solid;
@@ -84,7 +80,6 @@ h1 {
 }
 
 #mid-center {
-  /* background-color: yellow; */
   width: 10vw;
   height: 10vw;
   border-left: 7px solid;
@@ -94,7 +89,6 @@ h1 {
 }
 
 #mid-right {
-  /* background-color: green; */
   width: 10vw;
   height: 10vw;
   border-bottom: 7px solid;
@@ -102,14 +96,12 @@ h1 {
 }
 
 #bottom-left {
-  /* background-color: blue; */
   width: 10vw;
   height: 10vw;
   border-color: red;
 }
 
 #bottom-center {
-  /* background-color: yellow; */
   width: 10vw;
   height: 10vw;
   border-left: 7px solid;
@@ -118,7 +110,6 @@ h1 {
 }
 
 #bottom-right {
-  /* background-color: green; */
   width: 10vw;
   height: 10vw;
   border-color: red;

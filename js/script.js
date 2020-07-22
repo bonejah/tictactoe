@@ -4,11 +4,12 @@ const items = document.getElementsByClassName("square-item");
 
 for (const item of items) {
   item.addEventListener("click", function () {
+    let message = document.getElementById("result");
+    if (message.textContent != "") return;
+
     if (item.textContent != "") {
-      console.log("entrou aki 1");
       return;
     } else {
-      console.log("entrou aki 2");
       item.innerHTML += mark;
 
       if (isGameWon()) {
@@ -27,12 +28,15 @@ for (const item of items) {
         mark = "X";
       }
     }
-  }, false);
+  });
 }
+
+
 
 function restartGame() {
   for (const item of items) {
     item.innerHTML = "";
+    item.style.cursor = "pointer";
   }
 
   let message = document.getElementById("result");
@@ -66,7 +70,7 @@ function updateTime(k) {
 function createMessageResultGame(msg) {
   let message = document.getElementById("result");
 
-  if (msg != "" && msg != undefined) {
+  if (msg != "" && msg != undefined && message.textContent == "") {
     const h1Element = document.createElement("h1");
     h1Element.style.color = "#dcba30";
 
@@ -76,6 +80,11 @@ function createMessageResultGame(msg) {
     } else if (msg == "end") {
       h1Element.innerHTML += `End Game!!!`;
       message.appendChild(h1Element);
+    }
+    
+    const items = document.getElementsByClassName("square-item");
+    for (let i = 0; i < items.length; i++) {
+      items[i].style.cursor = "not-allowed";
     }
 
     mark = "X";
