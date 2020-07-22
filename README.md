@@ -1,11 +1,7 @@
 # Tic-Tac-Toe
 
 <h1 align="center">
-  <img src="https://ik.imagekit.io/5pahxdzx2d/logo_5On0Ah5EG.png" >
-</h1>
-
-<h1 align="center">
-  <img src="public/snapshots/ecoleta.gif">
+  <img src="./snapshots/screen_shot_01.png">
 </h1>
 
 # Index
