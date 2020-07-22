@@ -77,9 +77,7 @@ function createMessageResultGame(msg) {
       h1Element.innerHTML += `End Game!!!`;
       message.appendChild(h1Element);
     }
-    
-    
-    
+
     mark = "X";
   }
 }
