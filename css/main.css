@@ -27,6 +27,7 @@ h1 {
 .button{
   cursor: pointer;
   color: #ea777d;
+  margin-right: 10px;
 }
 
 #clock{

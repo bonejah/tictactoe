@@ -1,11 +1,15 @@
 let mark = "X";
 
+let scoreX = 0;
+let scoreO = 0;
+
 const items = document.getElementsByClassName("square-item");
+
 
 for (const item of items) {
   item.addEventListener("click", function () {
-    let message = document.getElementById("result");
-    if (message.textContent != "") return;
+    let result = document.getElementById("result");
+    if (result.textContent != "") return;
 
     if (item.textContent != "") {
       return;
@@ -31,9 +35,7 @@ for (const item of items) {
   });
 }
 
-
-
-function restartGame() {
+function playAgain () {
   for (const item of items) {
     item.innerHTML = "";
     item.style.cursor = "pointer";
@@ -43,9 +45,18 @@ function restartGame() {
   while (message.firstChild) {
     message.removeChild(message.firstChild);
   }
+
+  mark = "X";
 }
 
-function clock() {
+function restartGame () {
+  playAgain();
+  scoreX = 0;
+  scoreO = 0;
+  mark = "X";
+}
+
+function clock () {
   let date = new Date();
   let hour = date.getHours();
   let minute = date.getMinutes();
@@ -59,7 +70,7 @@ function clock() {
   setTimeout(clock, 1000);
 }
 
-function updateTime(k) {
+function updateTime (k) {
   if (k < 10) {
     return "0" + k;
   } else {
@@ -67,7 +78,7 @@ function updateTime(k) {
   }
 }
 
-function createMessageResultGame(msg) {
+function createMessageResultGame (msg) {
   let message = document.getElementById("result");
 
   if (msg != "" && msg != undefined && message.textContent == "") {
@@ -77,6 +88,7 @@ function createMessageResultGame(msg) {
     if (msg == "winner") {
       h1Element.innerHTML += `Player ${mark} is Winner!!!`;
       message.appendChild(h1Element);
+      markScore(mark);
     } else if (msg == "end") {
       h1Element.innerHTML += `End Game!!!`;
       message.appendChild(h1Element);
@@ -91,7 +103,23 @@ function createMessageResultGame(msg) {
   }
 }
 
-function isBoardFull() {
+function markScore (mark) {
+  console.log("mark", mark)
+  console.log("scoreX Before", scoreX)
+  console.log("scoreO After", scoreO)
+  
+  if (mark === "X") {
+    scoreX++;
+  } else if (mark === "O") {
+    scoreO++
+  } 
+  
+  console.log("scoreX After", scoreX)
+  console.log("scoreO After", scoreO)
+}
+
+
+function isBoardFull () {
   const top_left = document.getElementById("top-left").textContent;
   const top_center = document.getElementById("top-center").textContent;
   const top_right = document.getElementById("top-right").textContent;
@@ -121,7 +149,7 @@ function isBoardFull() {
   return false;
 }
 
-function isGameWon() {
+function isGameWon () {
   let rowsWon,
     colsWon,
     diagWon = false;
