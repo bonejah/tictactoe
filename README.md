@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 
 <h1 align="center">
-  <img src="./snapshots/screen_shot_01.png">
+  <img src="./snapshots/screen_shot_02.png">
 </h1>
 
 # Index
