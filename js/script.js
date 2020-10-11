@@ -3,8 +3,13 @@ let mark = "X";
 let scoreX = 0;
 let scoreO = 0;
 
-const items = document.getElementsByClassName("square-item");
+let inputScoreX = document.getElementById("scoreX")
+inputScoreX.value = scoreX;
 
+let inputScoreO = document.getElementById("scoreO")
+inputScoreO.value = scoreO;
+
+const items = document.getElementsByClassName("square-item");
 
 for (const item of items) {
   item.addEventListener("click", function () {
@@ -54,6 +59,12 @@ function restartGame () {
   scoreX = 0;
   scoreO = 0;
   mark = "X";
+
+  let inputScoreX = document.getElementById("scoreX")
+  inputScoreX.value = scoreX;
+
+  let inputScoreO = document.getElementById("scoreO");
+  inputScoreO.value = scoreO;
 }
 
 function clock () {
@@ -104,18 +115,15 @@ function createMessageResultGame (msg) {
 }
 
 function markScore (mark) {
-  console.log("mark", mark)
-  console.log("scoreX Before", scoreX)
-  console.log("scoreO After", scoreO)
-  
   if (mark === "X") {
+    let inputScoreX = document.getElementById("scoreX")
     scoreX++;
+    inputScoreX.value = scoreX;
   } else if (mark === "O") {
+    let inputScoreO = document.getElementById("scoreO");
     scoreO++
-  } 
-  
-  console.log("scoreX After", scoreX)
-  console.log("scoreO After", scoreO)
+    inputScoreO.value = scoreO;
+  }
 }
 
 

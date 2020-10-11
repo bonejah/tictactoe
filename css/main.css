@@ -50,6 +50,22 @@ h1 {
   color: #dcba30;
 }
 
+.score {
+  display: flex;
+  justify-content: center;
+  color: #ea777d;
+  margin-bottom: 17px;
+}
+
+.score-label {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.score-input {
+  width: 30px;
+}
+
 #top-left {
   width: 10vw;
   height: 10vw;
